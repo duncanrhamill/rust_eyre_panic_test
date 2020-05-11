@@ -1,0 +1,39 @@
+    Finished dev [unoptimized + debuginfo] target(s) in 0.04s
+     Running `target/debug/panic_test`
+Error: Error
+
+Stack backtrace:
+   0: backtrace::backtrace::libunwind::trace
+             at /cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/libunwind.rs:86
+      backtrace::backtrace::trace_unsynchronized
+             at /cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/mod.rs:66
+      std::backtrace::Backtrace::create
+             at src/libstd/backtrace.rs:302
+   1: std::backtrace::Backtrace::capture
+             at src/libstd/backtrace.rs:277
+   2: <eyre::DefaultContext as eyre::EyreContext>::default
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/eyre-0.4.1/src/lib.rs:686
+   3: eyre::error::<impl eyre::Report<C>>::from_adhoc
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/eyre-0.4.1/src/error.rs:115
+   4: eyre::private::new_adhoc
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/eyre-0.4.1/src/lib.rs:1100
+   5: panic_test::main
+             at src/main.rs:23
+   6: std::rt::lang_start::{{closure}}
+             at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs:67
+   7: std::rt::lang_start_internal::{{closure}}
+             at src/libstd/rt.rs:52
+      std::panicking::try::do_call
+             at src/libstd/panicking.rs:297
+      std::panicking::try
+             at src/libstd/panicking.rs:274
+      std::panic::catch_unwind
+             at src/libstd/panic.rs:394
+      std::rt::lang_start_internal
+             at src/libstd/rt.rs:51
+   8: std::rt::lang_start
+             at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs:67
+   9: main
+  10: __libc_start_main
+             at /build/glibc-FUvrFr/glibc-2.28/csu/libc-start.c:308
+

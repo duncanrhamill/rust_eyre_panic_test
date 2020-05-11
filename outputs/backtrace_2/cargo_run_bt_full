@@ -1,0 +1,78 @@
+    Finished dev [unoptimized + debuginfo] target(s) in 0.08s
+     Running `target/debug/panic_test`
+normal stuff
+bt:    0: backtrace::backtrace::libunwind::trace
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/libunwind.rs:86
+      backtrace::backtrace::trace_unsynchronized
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/mod.rs:66
+   1: backtrace::backtrace::trace
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/mod.rs:53
+   2: backtrace::capture::Backtrace::create
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/capture.rs:164
+   3: backtrace::capture::Backtrace::new
+             at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/capture.rs:128
+   4: panic_test::main
+             at src/main.rs:62
+   5: std::rt::lang_start::{{closure}}
+             at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs:67
+   6: std::rt::lang_start_internal::{{closure}}
+             at src/libstd/rt.rs:52
+      std::panicking::try::do_call
+             at src/libstd/panicking.rs:297
+      std::panicking::try
+             at src/libstd/panicking.rs:274
+      std::panic::catch_unwind
+             at src/libstd/panic.rs:394
+      std::rt::lang_start_internal
+             at src/libstd/rt.rs:51
+   7: std::rt::lang_start
+             at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs:67
+   8: main
+   9: __libc_start_main
+             at /build/glibc-FUvrFr/glibc-2.28/csu/libc-start.c:308
+
+thread 'main' panicked at 'panic!', src/main.rs:68:5
+stack backtrace:
+   0:   0x537cf4 - backtrace::backtrace::libunwind::trace::h19f0e9723381df32
+                       at /cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/libunwind.rs:86
+   1:   0x537cf4 - backtrace::backtrace::trace_unsynchronized::h4689672582c6f73d
+                       at /cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/mod.rs:66
+   2:   0x537cf4 - std::sys_common::backtrace::_print_fmt::h555e818d074d456c
+                       at src/libstd/sys_common/backtrace.rs:78
+   3:   0x537cf4 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::hda0f74c2888e4e45
+                       at src/libstd/sys_common/backtrace.rs:59
+   4:   0x54e768 - core::fmt::write::hd5deabd920c4e4ab
+                       at src/libcore/fmt/mod.rs:1069
+   5:   0x535c04 - std::io::Write::write_fmt::h6d8723e6380c1d4d
+                       at src/libstd/io/mod.rs:1537
+   6:   0x53a248 - std::sys_common::backtrace::_print::h1a240c08a14b3ea3
+                       at src/libstd/sys_common/backtrace.rs:62
+   7:   0x53a248 - std::sys_common::backtrace::print::he8a632cb741f8cfd
+                       at src/libstd/sys_common/backtrace.rs:49
+   8:   0x53a248 - std::panicking::default_hook::{{closure}}::ha92d8871ef11f458
+                       at src/libstd/panicking.rs:198
+   9:   0x539f08 - std::panicking::default_hook::hbe3dd080d55d3d81
+                       at src/libstd/panicking.rs:218
+  10:   0x53a924 - std::panicking::rust_panic_with_hook::h8566666fb90d07b7
+                       at src/libstd/panicking.rs:477
+  11:   0x4fb7b8 - std::panicking::begin_panic::h312ec1889de781ee
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/panicking.rs:404
+  12:   0x4f9dcc - panic_test::main::h5a7d07ea6e09e24a
+                       at src/main.rs:68
+  13:   0x4f98c4 - std::rt::lang_start::{{closure}}::hc946c303e190dc53
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs:67
+  14:   0x53ac64 - std::rt::lang_start_internal::{{closure}}::hd5f964dda5660b12
+                       at src/libstd/rt.rs:52
+  15:   0x53ac64 - std::panicking::try::do_call::h4683fcc1c54e6e51
+                       at src/libstd/panicking.rs:297
+  16:   0x53ac64 - std::panicking::try::hc0df9ee619425054
+                       at src/libstd/panicking.rs:274
+  17:   0x53ac64 - std::panic::catch_unwind::heaea33a94c7dc666
+                       at src/libstd/panic.rs:394
+  18:   0x53ac64 - std::rt::lang_start_internal::h8673ad1854342d74
+                       at src/libstd/rt.rs:51
+  19:   0x4f9898 - std::rt::lang_start::hc0b237642e02cb39
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs:67
+  20:   0x4f9e4c - main
+  21: 0xb6df8718 - __libc_start_main
+                       at /build/glibc-FUvrFr/glibc-2.28/csu/libc-start.c:308

@@ -1,0 +1,4 @@
+    Finished dev [unoptimized + debuginfo] target(s) in 0.11s
+     Running `target/debug/panic_test`
+Error: 
+   0: [31mPanicy panic[0m

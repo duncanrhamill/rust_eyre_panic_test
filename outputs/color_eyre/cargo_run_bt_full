@@ -1,0 +1,47 @@
+    Finished dev [unoptimized + debuginfo] target(s) in 0.14s
+     Running `target/debug/panic_test`
+thread 'main' panicked at 'assertion failed: (self.addr as usize) < (isize::MAX as usize)', /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/macros.rs:13:23
+stack backtrace:
+   0:   0x5ba448 - backtrace::backtrace::libunwind::trace::h19f0e9723381df32
+                       at /cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/libunwind.rs:86
+   1:   0x5ba448 - backtrace::backtrace::trace_unsynchronized::h4689672582c6f73d
+                       at /cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/mod.rs:66
+   2:   0x5ba448 - std::sys_common::backtrace::_print_fmt::h555e818d074d456c
+                       at src/libstd/sys_common/backtrace.rs:78
+   3:   0x5ba448 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::hda0f74c2888e4e45
+                       at src/libstd/sys_common/backtrace.rs:59
+   4:   0x5d2538 - core::fmt::write::hd5deabd920c4e4ab
+                       at src/libcore/fmt/mod.rs:1069
+   5:   0x5b8790 - std::io::Write::write_fmt::h6d8723e6380c1d4d
+                       at src/libstd/io/mod.rs:1537
+   6:   0x5bc9b0 - std::sys_common::backtrace::_print::h1a240c08a14b3ea3
+                       at src/libstd/sys_common/backtrace.rs:62
+   7:   0x5bc9b0 - std::sys_common::backtrace::print::he8a632cb741f8cfd
+                       at src/libstd/sys_common/backtrace.rs:49
+   8:   0x5bc9b0 - std::panicking::default_hook::{{closure}}::ha92d8871ef11f458
+                       at src/libstd/panicking.rs:198
+   9:   0x5bc670 - std::panicking::default_hook::hbe3dd080d55d3d81
+                       at src/libstd/panicking.rs:218
+  10:   0x5bd08c - std::panicking::rust_panic_with_hook::h8566666fb90d07b7
+                       at src/libstd/panicking.rs:477
+  11:   0x566704 - std::panicking::begin_panic::h814ae8b6c5b32bb5
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/panicking.rs:404
+  12:   0x524754 - <findshlibs::linux::SharedLibrary as findshlibs::SharedLibrary>::virtual_memory_bias::h516375291dd5c1eb
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/macros.rs:13
+  13:   0x510ed0 - backtrace::symbolize::gimli::Cache::new::{{closure}}::hf2cf6994a9e8584c
+                       at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/symbolize/gimli.rs:427
+  14:   0x520bb0 - findshlibs::linux::SharedLibrary::callback::{{closure}}::h1955e727a44d3047
+                       at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/findshlibs-0.5.0/src/linux/mod.rs:185
+  15:   0x5148e0 - core::ops::function::FnOnce::call_once::h3c9ce17607ea5769
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libcore/ops/function.rs:232
+  16:   0x50e594 - <std::panic::AssertUnwindSafe<F> as core::ops::function::FnOnce<()>>::call_once::hed285efd37b3cdfc
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/panic.rs:318
+  17:   0x4e19b0 - std::panicking::try::do_call::h79bf1e670f2d5259
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/panicking.rs:297
+  18:   0x4e6544 - __rust_try
+  19:   0x4e18d8 - std::panicking::try::h1745268a494fa295
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/panicking.rs:274
+  20:   0x50e830 - std::panic::catch_unwind::h757433610ca53f0b
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/panic.rs:394
+  21:   0x520a28 - findshlibs::linux::SharedLibrary::callback::h5e9137099cdb8a03
+                       at /home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/findshlibs-0.5.0/src/linux/mod.rs:181

@@ -1,0 +1,45 @@
+warning: unused variable: `ip`
+  --> src/main.rs:36:13
+   |
+36 |         let ip = frame.ip();
+   |             ^^ help: if this is intentional, prefix it with an underscore: `_ip`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `symbol_address`
+  --> src/main.rs:37:13
+   |
+37 |         let symbol_address = frame.symbol_address();
+   |             ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_symbol_address`
+
+warning: 2 warnings emitted
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.08s
+     Running `target/debug/panic_test`
+Name: backtrace::backtrace::libunwind::trace::h4870d0ae410a1cc5
+Filename: "/home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/libunwind.rs"
+Name: backtrace::backtrace::trace_unsynchronized::h1f34a428c303ff23
+Filename: "/home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/mod.rs"
+Name: backtrace::backtrace::trace::h63f9eead342efac0
+Filename: "/home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/mod.rs"
+Name: panic_test::main::h7e60a44d390e3bfc
+Filename: "src/main.rs"
+Name: std::rt::lang_start::{{closure}}::h90b1015f5b7771be
+Filename: "/rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs"
+Name: std::rt::lang_start_internal::{{closure}}::hd5f964dda5660b12
+Filename: "src/libstd/rt.rs"
+Name: std::panicking::try::do_call::h4683fcc1c54e6e51
+Filename: "src/libstd/panicking.rs"
+Name: std::panicking::try::hc0df9ee619425054
+Filename: "src/libstd/panicking.rs"
+Name: std::panic::catch_unwind::heaea33a94c7dc666
+Filename: "src/libstd/panic.rs"
+Name: std::rt::lang_start_internal::h8673ad1854342d74
+Filename: "src/libstd/rt.rs"
+Name: std::rt::lang_start::h0cf7958c6aa6a65b
+Filename: "/rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs"
+Name: main
+Name: __libc_start_main
+Filename: "/build/glibc-FUvrFr/glibc-2.28/csu/libc-start.c"
+thread 'main' panicked at 'panic', src/main.rs:52:5
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

@@ -1,0 +1,88 @@
+warning: unused variable: `ip`
+  --> src/main.rs:36:13
+   |
+36 |         let ip = frame.ip();
+   |             ^^ help: if this is intentional, prefix it with an underscore: `_ip`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `symbol_address`
+  --> src/main.rs:37:13
+   |
+37 |         let symbol_address = frame.symbol_address();
+   |             ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_symbol_address`
+
+warning: 2 warnings emitted
+
+    Finished dev [unoptimized + debuginfo] target(s) in 0.08s
+     Running `target/debug/panic_test`
+Name: backtrace::backtrace::libunwind::trace::h4870d0ae410a1cc5
+Filename: "/home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/libunwind.rs"
+Name: backtrace::backtrace::trace_unsynchronized::h1f34a428c303ff23
+Filename: "/home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/mod.rs"
+Name: backtrace::backtrace::trace::h63f9eead342efac0
+Filename: "/home/pi/.cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/mod.rs"
+Name: panic_test::main::h7e60a44d390e3bfc
+Filename: "src/main.rs"
+Name: std::rt::lang_start::{{closure}}::h90b1015f5b7771be
+Filename: "/rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs"
+Name: std::rt::lang_start_internal::{{closure}}::hd5f964dda5660b12
+Filename: "src/libstd/rt.rs"
+Name: std::panicking::try::do_call::h4683fcc1c54e6e51
+Filename: "src/libstd/panicking.rs"
+Name: std::panicking::try::hc0df9ee619425054
+Filename: "src/libstd/panicking.rs"
+Name: std::panic::catch_unwind::heaea33a94c7dc666
+Filename: "src/libstd/panic.rs"
+Name: std::rt::lang_start_internal::h8673ad1854342d74
+Filename: "src/libstd/rt.rs"
+Name: std::rt::lang_start::h0cf7958c6aa6a65b
+Filename: "/rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs"
+Name: main
+Name: __libc_start_main
+Filename: "/build/glibc-FUvrFr/glibc-2.28/csu/libc-start.c"
+thread 'main' panicked at 'panic', src/main.rs:52:5
+stack backtrace:
+   0:   0x490a5c - backtrace::backtrace::libunwind::trace::h19f0e9723381df32
+                       at /cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/libunwind.rs:86
+   1:   0x490a5c - backtrace::backtrace::trace_unsynchronized::h4689672582c6f73d
+                       at /cargo/registry/src/github.com-1ecc6299db9ec823/backtrace-0.3.46/src/backtrace/mod.rs:66
+   2:   0x490a5c - std::sys_common::backtrace::_print_fmt::h555e818d074d456c
+                       at src/libstd/sys_common/backtrace.rs:78
+   3:   0x490a5c - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::hda0f74c2888e4e45
+                       at src/libstd/sys_common/backtrace.rs:59
+   4:   0x4a74d0 - core::fmt::write::hd5deabd920c4e4ab
+                       at src/libcore/fmt/mod.rs:1069
+   5:   0x48ec80 - std::io::Write::write_fmt::h6d8723e6380c1d4d
+                       at src/libstd/io/mod.rs:1537
+   6:   0x492fb0 - std::sys_common::backtrace::_print::h1a240c08a14b3ea3
+                       at src/libstd/sys_common/backtrace.rs:62
+   7:   0x492fb0 - std::sys_common::backtrace::print::he8a632cb741f8cfd
+                       at src/libstd/sys_common/backtrace.rs:49
+   8:   0x492fb0 - std::panicking::default_hook::{{closure}}::ha92d8871ef11f458
+                       at src/libstd/panicking.rs:198
+   9:   0x492c70 - std::panicking::default_hook::hbe3dd080d55d3d81
+                       at src/libstd/panicking.rs:218
+  10:   0x49368c - std::panicking::rust_panic_with_hook::h8566666fb90d07b7
+                       at src/libstd/panicking.rs:477
+  11:   0x45ee4c - std::panicking::begin_panic::h312ec1889de781ee
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/panicking.rs:404
+  12:   0x45ec00 - panic_test::main::h7e60a44d390e3bfc
+                       at src/main.rs:52
+  13:   0x45e62c - std::rt::lang_start::{{closure}}::h90b1015f5b7771be
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs:67
+  14:   0x4939cc - std::rt::lang_start_internal::{{closure}}::hd5f964dda5660b12
+                       at src/libstd/rt.rs:52
+  15:   0x4939cc - std::panicking::try::do_call::h4683fcc1c54e6e51
+                       at src/libstd/panicking.rs:297
+  16:   0x4939cc - std::panicking::try::hc0df9ee619425054
+                       at src/libstd/panicking.rs:274
+  17:   0x4939cc - std::panic::catch_unwind::heaea33a94c7dc666
+                       at src/libstd/panic.rs:394
+  18:   0x4939cc - std::rt::lang_start_internal::h8673ad1854342d74
+                       at src/libstd/rt.rs:51
+  19:   0x45e600 - std::rt::lang_start::h0cf7958c6aa6a65b
+                       at /rustc/9912925c254589f58338cb2993163e618475ff75/src/libstd/rt.rs:67
+  20:   0x45ec4c - main
+  21: 0xb6dd2718 - __libc_start_main
+                       at /build/glibc-FUvrFr/glibc-2.28/csu/libc-start.c:308
